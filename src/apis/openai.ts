@@ -8,17 +8,19 @@ export default async function sendRequest(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + openaiApiKey,
     },
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
       messages: messages,
     }),
   };
+  console.log("json:");
+  console.log(JSON.stringify({model: 'gpt-3.5-turbo',messages: messages}));
 
-  const openaiHostAddress = openaiHost || 'api.openai.com';
+  const chatHostAddress = 'https://www.wybstudio.net';
+  //const chatHostAddress = 'remote';
 
-  fetch('https://' + openaiHostAddress + '/v1/chat/completions', requestOptions)
+  fetch(chatHostAddress + '/api/speech/chat', requestOptions)
     .then(response => response.json())
     .then(data => {
       callback(data);

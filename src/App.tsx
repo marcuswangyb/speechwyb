@@ -8,6 +8,7 @@ import 'highlight.js/styles/github.css';
 function App() {
   initialGlobalState();
   return (
+    // <Router>
     <Router basename="/speech">
       <Routes>
         <Route path="/" element={<Home />} />

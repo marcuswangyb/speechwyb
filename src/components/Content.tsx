@@ -197,7 +197,8 @@ const Content: React.FC<ContentProps> = ({ notify }) => {
               notify.openAiErrorNotify();
             }
           }
-          setResponse(data.choices[0].message.content);
+          //setResponse(data.choices[0].message.content);
+          setResponse(data.message);
           console.log('Response: ' + data.choices[0].message.content);
           setStatus('idle');
         }
