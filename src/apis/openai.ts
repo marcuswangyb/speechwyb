@@ -17,8 +17,11 @@ export default async function sendRequest(
   console.log("json:");
   console.log(JSON.stringify({model: 'gpt-3.5-turbo',messages: messages}));
 
-  const chatHostAddress = 'https://www.wybstudio.net';
-  //const chatHostAddress = 'remote';
+  const chatHostAddress = import.meta.env.DEV?
+    'remote':
+    'https://www.wybstudio.net';
+
+  console.log("mode:",import.meta.env.MODE)
 
   fetch(chatHostAddress + '/api/speech/chat', requestOptions)
     .then(response => response.json())

@@ -7,15 +7,26 @@ import 'highlight.js/styles/github.css';
 
 function App() {
   initialGlobalState();
-  return (
-    // <Router>
-    <Router basename="/speech">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
-  );
+  if(import.meta.env.DEV) {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    );
+  } else {
+    return (
+      <Router basename="/speech">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    );
+  }
+  
 }
 
 export default App;

@@ -63,11 +63,11 @@ const SynthesisSection: React.FC<SynthesisSectionProps> = ({}) => {
       setSystemLanguages(uniqueLanguages);
     };
 
-    if ('speechSynthesis' in window) {
+    /*if ('speechSynthesis' in window) {
       window.speechSynthesis.onvoiceschanged = loadVoices;
     } else {
       alert('Your browser does not support the Web Speech API.');
-    }
+    }*/
 
     loadVoices();
   }, []);
