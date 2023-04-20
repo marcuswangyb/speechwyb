@@ -34,9 +34,9 @@ const defaultGlobalState = {
   chat: {
     systemRole: 'From now on, the number of words in your reply cannot exceed 50 words.',
     defaultPrompt: '',
-    useAssistant: false,
-    temperature: 0.8,
-    maxMessages: 20,
+    useAssistant: true,
+    temperature: 1,
+    maxMessages: 60,
   },
   speech: {
     service: 'System',

@@ -185,6 +185,8 @@ const Content: React.FC<ContentProps> = ({ notify }) => {
       const openaiApiHost = existEnvironmentVariable('OPENAI_HOST')
         ? getEnvironmentVariable('OPENAI_HOST')
         : key.openaiHost;
+
+      setResponse('');
       sendRequest(conversationsToSent as any, openaiApiKey, openaiApiHost, (data: any) => {
         setStatus('idle');
         if (data) {
