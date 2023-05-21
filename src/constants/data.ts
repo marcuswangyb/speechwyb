@@ -323,6 +323,11 @@ const azureRegions = [
 ];
 
 const azureSpeechSynthesisLanguagesLocale: { [key: string]: string } = {
+  'en-US': 'English (US)',
+  'zh-CN': '中文 (中国)',
+};
+/*
+const azureSpeechSynthesisLanguagesLocale: { [key: string]: string } = {
   'af-ZA': 'Afrikaans',
   'am-ET': 'አማርኛ',
   'ar-AE': 'العربية (الإمارات)',
@@ -470,7 +475,7 @@ const azureSpeechSynthesisLanguagesLocale: { [key: string]: string } = {
   'zh-HK': '中文 (香港)',
   'zh-TW': '中文 (台湾)',
   'zu-ZA': 'isiZulu',
-};
+};*/
 
 const azureSpeechSynthesisVoices: { [key: string]: string[] } = {
   'af-ZA': ['af-ZA-AdriNeural', 'af-ZA-WillemNeural'],
@@ -820,8 +825,12 @@ const speechRecognitionSystemLanguagesLocale: { [key: string]: string } = {
 };
 
 // 2. Azure Speech Services
-
 const azureSpeechRecognitionLanguagesLocale: { [key: string]: string } = {
+  'en-US': 'English (United States)',
+  'zh-CN': '中文（普通话 / 中国）',
+};
+
+/*const azureSpeechRecognitionLanguagesLocale: { [key: string]: string } = {
   'af-ZA': 'Afrikaans (Suid-Afrika)',
   'am-ET': 'አማርኛ (ኢትዮጵያ)',
   'ar-AE': 'العربية (الإمارات العربية المتحدة)',
@@ -962,9 +971,14 @@ const azureSpeechRecognitionLanguagesLocale: { [key: string]: string } = {
   'zh-HK': '中文（香港）',
   'zh-TW': '中文（台灣）',
   'zu-ZA': 'isiZulu (iNingizimu Afrika)',
-};
+};*/
 
 // 139 languages
+const azureSpeechRecognitionLanguages: { [key: string]: string } = {
+  'es-US': 'Spanish (United States)',
+  'zh-CN': 'Chinese (China)',
+};
+/*
 const azureSpeechRecognitionLanguages: { [key: string]: string } = {
   'af-ZA': 'Afrikaans (South Africa)',
   'am-ET': 'Amharic (Ethiopia)',
@@ -1106,7 +1120,7 @@ const azureSpeechRecognitionLanguages: { [key: string]: string } = {
   'zh-HK': 'Chinese (Hong Kong)',
   'zh-TW': 'Chinese (Taiwan)',
   'zu-ZA': 'Zulu (South Africa)',
-};
+};*/
 
 export {
   amazonPollyEngines,
