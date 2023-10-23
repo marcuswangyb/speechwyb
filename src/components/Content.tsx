@@ -157,7 +157,7 @@ const Content: React.FC<ContentProps> = ({ notify }) => {
   }, [transcript]);
 
   useEffect(() => {
-    if (response.length !== 0 && response !== 'undefined') {
+    if (response && response.length !== 0 && response !== 'undefined') {
       setSendMessages(false);
       db.chat.add({ role: 'assistant', content: response });
       generateSpeech(response).then();
@@ -199,8 +199,9 @@ const Content: React.FC<ContentProps> = ({ notify }) => {
               notify.openAiErrorNotify();
             }
           }
-          //setResponse(data.choices[0].message.content);
-          setResponse(data.message);
+          setResponse(data.choices[0].message.content);
+          //backend mode
+          //setResponse(data.message);   
           console.log('Response: ' + data.choices[0].message.content);
           setStatus('idle');
         }
