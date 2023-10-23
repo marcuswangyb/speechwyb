@@ -20,21 +20,21 @@ export default async function sendRequest(
   console.log(JSON.stringify({model: 'gpt-3.5-turbo',messages: messages}));
 
   // backend mode
-  const chatHostAddress = import.meta.env.DEV?
-    'remote':
-    'https://www.wybstudio.net';
+  // const chatHostAddress = import.meta.env.DEV?
+  //   'remote':
+  //   'https://www.wybstudio.net';
     
 
-  console.log("mode:",import.meta.env.MODE)
+  // console.log("mode:",import.meta.env.MODE)
 
-  fetch(chatHostAddress + '/api/speech/chat', requestOptions)
-    .then(response => response.json())
-    .then(data => {
-      callback(data);
-    })
-    .catch(err => {
-      return err;
-    });
+  // fetch(chatHostAddress + '/api/speech/chat', requestOptions)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     callback(data);
+  //   })
+  //   .catch(err => {
+  //     return err;
+  //   });
   
   // direct mode 
   const openaiHostAddress = openaiHost || 'api.openai.com';
